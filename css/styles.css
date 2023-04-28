@@ -1,13 +1,6 @@
-/* En este archivo escriban su CSS */
-
 /* Fonts */
-/* Importar aquí la font */
-
-
-
-/* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
-*  cuyos valores asigna por defecto el navegador.
-*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 /* Reset */
 * {
@@ -16,11 +9,41 @@
     padding: 0;
     /* Para que el scrolleo en la one page sea suave */
     scroll-behavior: smooth;
+    font-family: 'Lato', sans-serif;
 }
 
-/* Para quitar los puntos a los items de listas */
+body {
+    background-color: #fbfbfb;
+}
+
+.logo {
+    width: 20vh;
+}
+
+header {
+    height: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 1.6rem;
+    position: fixed;
+    width: 100%;
+}
+
 ul {
+    display: flex;
     list-style: none;
+}
+
+li {
+    margin-left: 1.2rem;
+}
+
+ul li a:hover {
+    color: #af599e;
 }
 
 /* Para que los enlaces hereden el color de texto y no tengan subrayado */
@@ -35,22 +58,98 @@ a {
 main {
     max-width: 1200px;
     margin: auto;
+    padding: 2rem;
 }
 
-/* Recomendaciones! 
-*  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
-*    "estilos generales". Una buena idea sería comenzar por el <body> ;)
-*
-*  - Recuerden que queremos evitar "repetir código", en CSS usando la cualidad de la herencia
-*    podemos setear ciertas propiedades en un elemento padre y dejar que sean heredadas (por ejemplo: font-size)
-*
-*  - Nadie sabe todas las propiedades CSS de memoria, si no saben como hacer algo no lo recuerdan, la respuesta
-*    pueden encontrarla buscando en la web algo como "CSS como hacer ... " o "propiedad css para hacer ..."
-*
-*  - Usen mucho las herramientas para desarrolladores del navegador para ir
-*    probando el CSS que escriben, resolver dudas y problemas.
-*
-*  - Paciencia, resiliencia y creatividad! No se desanimen, las primeras experiencias maquetando con HTML y CSS
-*    pueden ser frustrantes, pero estas habilidades se van desarrollando con la experiencia, es como aprender
-*    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
-*/
+.foto {
+    max-width: 300px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+section {
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h1,
+.parrafo {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.parrafo, li {
+    font-size: 18px;
+}
+
+.boton {
+    margin-top: 0px;
+    background-color: #af599e;
+    color: #fbfbfb;
+    font-size: 20px;
+    display: inline-block;
+    margin: 0 auto;
+    width: max-content;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+article {
+    justify-content: center;
+    justify-items: center;
+    background-color: rgba(175, 89, 158, 0.3);
+    color: #0f0f0f;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+h2{
+    font-size: 28px;
+}
+
+div {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 50px;
+    color: #af599e;
+    padding: 40px;
+}
+
+footer {
+    background-color: #af599e;
+    padding: 15px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    color: #fbfbfb;
+}
+
+@media (max-width: 300px) {
+   .foto{
+    width: 50%;
+   }
+   h1{
+    font-size: 25px;
+   }
+   .parrafo, li, .boton{
+    font-size: 16px;
+   }
+   h2{
+    font-size: 22px;
+   }
+   div{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+   }
+}
