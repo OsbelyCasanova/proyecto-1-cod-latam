@@ -9,11 +9,12 @@
     padding: 0;
     /* Para que el scrolleo en la one page sea suave */
     scroll-behavior: smooth;
-    font-family: 'Lato', sans-serif;
 }
 
 body {
     background-color: #fbfbfb;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.2;
 }
 
 .logo {
@@ -64,7 +65,8 @@ main {
 .foto {
     max-width: 300px;
     border-radius: 50%;
-    background-color: black;
+    border: 1px solid #af599e;
+    margin-top: 100px;
 }
 
 section {
@@ -74,7 +76,6 @@ section {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin-top: 50px;
 }
 
 h1 {
@@ -87,7 +88,8 @@ h1,
     margin-top: 10px;
 }
 
-.parrafo, li {
+.parrafo,
+li {
     font-size: 18px;
 }
 
@@ -113,16 +115,72 @@ article {
     border-radius: 5px;
 }
 
-h2{
+h2,
+h3 {
     font-size: 28px;
 }
 
-div {
+section div {
     display: flex;
     justify-content: space-evenly;
     font-size: 50px;
     color: #af599e;
     padding: 40px;
+}
+
+i:hover {
+    transform: scale(1.5);
+    transition: 1.5s;
+}
+
+form {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+form div {
+    padding: 20px;
+}
+
+label {
+    color: #0f0f0f;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: 2px solid #af599e;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 600px;
+}
+
+textarea {
+    height: 200px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #af599e;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 600px;
+    margin-top: 30px;
+}
+
+button:hover {
+    transition: 1s;
+    background-color: rgba(175, 89, 158, 0.3);
+    color: #0f0f0f;
 }
 
 footer {
@@ -134,22 +192,51 @@ footer {
     color: #fbfbfb;
 }
 
-@media (max-width: 300px) {
-   .foto{
-    width: 50%;
-   }
-   h1{
-    font-size: 25px;
-   }
-   .parrafo, li, .boton{
-    font-size: 16px;
-   }
-   h2{
-    font-size: 22px;
-   }
-   div{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-   }
+@media screen and (max-width: 600px) {
+   
+    header {
+        height: 60px;
+    }
+
+    .foto {
+        margin-top: 80px;
+        width: 50%;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .parrafo,
+    li,
+    .boton,
+    label,
+    button {
+        font-size: 16px;
+    }
+
+    h2,
+    h3 {
+        font-size: 22px;
+    }
+
+    section div {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    input,
+    textarea {
+        padding: 10px;
+        border: 2px solid #af599e;
+        border-radius: 5px;
+        font-size: 10px;
+        width: 200px;
+    }
+
+    textarea{
+        height: 100px;
+    }
+
 }

@@ -13,13 +13,11 @@
 <body>
 
     <header>
-        <figure>
-            <img  class="logo" src="img/eidoslogo.png" alt="Logo Eidos">
-        </figure>
+        <figure><img class="logo" src="img/eidoslogo.png" alt="Logo Eidos" /></figure>
         <nav>
-            <ul id="menu-nav">
-                <li class="menu"><a href="#inicio">Inicio</a></li>
-                <li class="menu"><a href="#contacto">Contacto</a></li>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -27,7 +25,7 @@
     <main>
 
         <section id="inicio">
-            <figure><img class="foto" src="img/Foto Personal.png" alt="Foto Osbely"></figure>
+            <figure><img class="foto" src="img/Foto Personal.png" alt="Foto Osbely" /></figure>
             <h1>
                 Hola! Soy Osbely
             </h1>
@@ -48,7 +46,7 @@
                 <p class="parrafo">
                     Puedes contactarme a través de mi correo electrónico o whatsapp si deseas que te ayude a crear un
                     proyecto como éste. También puedes ver mis respositorios en GitHub que espero ir sumando
-                    eventualmente
+                    eventualmente.
                 </p>
             </article>
             <div>
@@ -65,13 +63,33 @@
             </div>
         </section>
 
-        <footer>
-            <p>
-                Código Latam
-            </p>
-        </footer>
+            <form>
+                <h3>Formulario de contacto</h3>
+                <div>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name">
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje"></textarea>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
 
     </main>
+
+    <footer>
+        <p>
+            Código Latam
+        </p>
+    </footer>
 
 </body>
 
